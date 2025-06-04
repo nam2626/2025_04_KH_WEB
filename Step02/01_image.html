@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- src : 이미지 경로, alt : 대체 텍스트 -->
+  <!-- 상대경로 : 현재 html파일을 기준으로 해당파일에 접하는 경로   -->
+  <h2>상대경로 이미지 출력</h2>
+  <img src="img/moon.jpg" alt="대체 텍스트"><br>
+  <!-- 
+    width : 이미지 가로길이, height : 이미지 세로길이
+    가로나 세로 길이 하나만 지정하면,
+    나머지 다른 방향 길이는 비율에 맞춰서 조정
+  -->
+  <img src="img/img.png" alt="대체 텍스트" width="200" /><br>
+  <!-- . 은 현재 폴더를 의미 -->
+  <img src="./img/img.png" alt="대체 텍스트" height="200" /><br>
+
+  <!-- rock.jpg를 조회는 이미지 태그 작성 -->
+  <!-- 상대경로 -->
+  <img src="../resource/img/rock.jpg" alt="대체 텍스트">
+  <!-- .. 은 상위 폴더로 이동한다는 의미 -->
+  <!-- 절대 경로 : 현재 파일 시스템(또는 웹서버에서 지정한 폴더) ROOT폴더 기준으로
+                  원하는 해당 경로까지 접근하는 방법 
+  -->
+  <!-- 
+    절대 경로를 쓰는 경우
+      항상 동일한 위치의 파일을 사용할 경우
+    
+    상대 경로를 쓰는 경우
+      프로젝트 내에서 접근할려는 경로가 유동적인 경우, 배포 환경에 따라 달라질때 사용
+  -->
+  <img src="/resource/img/rock.jpg" alt="대체 텍스트"><br>
+  <h2>벡터 이미지</h2>
+  <img src="./img/anime.svg" alt="">
+  <hr>
+  <!-- url 참조 -->
+  <img src="https://cdn0.iconfinder.com/data/icons/font-awesome-solid-vol-2/576/home-256.png" alt="">
+  <hr>
+  <!-- base64 방식 -->
+  <img
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABU1JREFUeF7tmnnobVMUxz/PTGYPkTFDhmdOCU9EhDzzPCSZ/pAyT2UqY/jDUCKReZ5DmTIUIZ54TzL7g4wJGTKe72sdtu3cs9a57/7u79zuWX/d7l5n77W/Z+211nevM4Uxlyljvn86ADoPGHMEuiMw5g4wqUFwc2ATewGvA681eBmLAAcDS1c88yfwEvBiZL7JOALrAzcCAiCVV4AjgFkBw68ATqjR+x1YE/jEm2vYAOwK3A4s3sOwH4HDgAccw+8ugNrX0dnSPKFWbVgAaJ1TgQuBeRzD/wIuBc4A9LtKRgqAhYDrgEM9d8zG7wEOL4D7qeK5kQFgReDBivMexWImsEfFWR4JALYA7gdWiO62h95XwD7A88l46wE4ELgBWHguN18+/itwLHCT/dFaAOYFLgZODm78BdObHtS/DDgduKONWWAJS3G7BDbzh21EG5KcVHjLJYAA9ORx09uxTWlwDeBhYD3P+mKzPwCHmH6qvhNwJ7BkYI6IytDqgG2Ae4FlA1Z9AMwAZvfQXcuAWScwl6cyFACOBq4G5vessSiuaK6oXidLFZ6kILdDYM46lQkFYAHb+FFBI68CTgRUo5ei9CjwJMcBnydj8wGXA8cH569SmzAAlgFUpW0XME4bFmkpN1o+snHBBB8CVrE/PgP2BESIUjmyOFrXFCW0AG8qEwLABmb46gFrvrFU9Wymu5+xQVHaVH4pvOAY4Obs/62A+4DlA2umKgMHwGNy6eJvAbsDHyV/loToIqi9h7jSvEa8vpSVrKTerAEIAwNAhp9VsLjzHcNL21T7i/iI2payaMHPbzVQIntQSlWqVMpM55B36KhERAXZmTWMcs4cHh0Wk7vejPEWLWmsFk3f3sr29jb1JsjG37aUWeVFEVqt6eoYpQtAEyan86uUeEvF+RUhWq7h5kt1xRHFjGey53UZIl6Qx5GqZXoxyloAmjA5RXBR1lez1ZUiFf37ieDpVMokKpUVG1LZyALyqgFwqxhlTwCaMLmXgb2yHK56/gLgtIBhTVR0qaJ64bfkoamWIVSNepIzyv8B0NRw1e26xPw5WVm3tHcNoIrrtRmxR1WTXyYKCwLX2u2RB4LG5UkqykTI/gmCi1mUVp3uiYKdMsK5meLa5pKDqOPrbPjQgmN+e6wYpKJJVaQnTwDy9O+UBXR9rLSzrvdUgdz39uBjmW6TGiGwjKui9Ki+wCOZ5s52VyBq7okI2QwB8H4RvUVnPZGePOSdTPEUQMVNhMt7azQZV6pVfaJ8n4pepMpsMUtP3hMAciWPxz9t6ejbZMZ+b3s9o5qO3waIMygVlxKNRbMFgDavVlKvZkVV9BWTU35XumyDvGGp+NPEGC+oK3hPLytB5XERjrRpofyraCkqm0rO5NoAgGxowigVyA/QvUNaCp9dZIXzbDdNmVxbQFCuVzbwGOU5lsn+wwUEhgaUzlTPf5ztanvgyQB/mGww9HZ1YfpUZshqFqzftRc9p+3mkaF0DtXfuqoaBRF/EBFypQPAhehfhc4DuiPQxYC5CoKKuuL1j5ZMrOL4qXjZDVDLrEl8yqdqZRB8Dtg2GHPUCo82TKumbCUASqH7BwGItL/rpuoAaGMd0HlAdwS6GNAFwS4LdGkwhkBXBwQ+gxt6IaR7Q+8r7jqj1B6Pfi+sm96DYs5SqSVbdTXuShPCoa/A1LLup9OrNtTeUaPsGwDd6PTTa/ii+GptWtFH/NrdfR+MS83IrYNfhZXrq4HxpjVgIjaVOmpsbBj4vD6dU41T9Q91qRuSJh4QmnDUlDoARu2NDdrezgMGjeiozTf2HvA3T6EoVZI++XQAAAAASUVORK5CYII="
+    alt="">
+</body>
+
+</html>
