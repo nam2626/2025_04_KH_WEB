@@ -1,12 +1,15 @@
 {
-    "files.autoSave": "onFocusChange",
-    "editor.fontSize": 32,
-    "editor.tabSize": 2,
-    "explorer.compactFolders": false,
-    "workbench.colorTheme": "Visual Studio 2017 Light - C++",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "liveServer.settings.CustomBrowser": "chrome",
-    "liveServer.settings.host": "192.168.20.12",
-    "editor.formatOnSave": true
+  "files.autoSave": "onFocusChange",
+  "editor.fontSize": 32,
+  "editor.tabSize": 2,
+  "explorer.compactFolders": false,
+  "workbench.colorTheme": "Visual Studio 2017 Light - C++",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.defaultFormatter": "Codeium.codeium",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "liveServer.settings.host": "192.168.20.12",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
