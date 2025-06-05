@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지맵</title>
+</head>
+
+<body>
+  <h2>이미지 맵 예제</h2>
+  <img src="./img/shape.png" usemap="#img_map">
+  <map name="img_map">
+    <!-- 사각형, 좌상단, 우하단 좌표값 -->
+    <area shape="rect" coords="41,67,535,378" href="https://www.naver.com">
+    <!-- 원, 중심좌표, 반지름 -->
+    <area shape="circle" coords="1055,224,137" href="https://www.google.com">
+    <!--다각형은 좌표값1x,좌표값1y,좌표값2x,좌표값2y,.....-->
+    <area shape="poly" coords="755,503,908,620,849,807,658,807,602,617" href="https://www.daum.net">
+  </map>
+  <hr>
+  <img src="./img/img_map.png" usemap="#sns_map">
+  <map name="sns_map">
+    <area target="" alt="" title="" href="https://www.youtube.com" coords="149,58,13,16" shape="rect">
+    <area target="" alt="" title="" href="https://www.naver.com" coords="83,149,62" shape="circle">
+    <area target="" alt="" title="" href="https://www.kakao.com" coords="265,103,62" shape="circle">
+    <area target="" alt="" title="" href="https://www.facebook.com" coords="389,29,523,69" shape="rect">
+    <area target="" alt="" title="" href="https://www.twitter.com"
+      coords="392,117,394,108,401,102,412,97,499,96,511,102,516,110,518,119,517,204,517,213,508,222,498,225,410,224,399,220,390,207,390,192"
+      shape="poly">
+  </map>
+</body>
+
+</html>
