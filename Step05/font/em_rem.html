@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>em, rem</title>
     <style>
-      
-    </style>    
+        /* 글꼴 크기는 자식 태그에게 상속이 된다.(글꼴, 글자색상, 정렬, 두께,...) */
+        .container {
+            font-size: 24px;
+        }
+
+        .rem2 {
+            font-size: 2rem;
+        }
+
+        .em2 {
+            font-size: 2em;
+        }
+
+        html {
+            font-size: 32px;
+        }
+
+        .px32 {
+            font-size: 32px;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <p>글꼴 크기 rem 단위</p>
-        <p>글꼴 크기 em 단위</p>
+        <p class="rem2">글꼴 크기 rem 단위</p>
+        <p class="em2">글꼴 크기 em 단위</p>
     </div>
-    <p>32px 글꼴</p>
+    <p class="px32">32px 글꼴</p>
     <p>기본 글꼴</p>
 </body>
+
 </html>
