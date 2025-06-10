@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-     
+        p{
+            width: 325px;
+            border: 1px solid black;
+            white-space: nowrap;
+            /* 내용이 길이를 넘어갔을때 처리(숨김, 스크롤) */
+            overflow: hidden;
+            /* 
+                clip : 자르기
+                ellipsis : ... 처리
+            */
+            text-overflow: ellipsis;
+        }
        
     </style>
 </head>
