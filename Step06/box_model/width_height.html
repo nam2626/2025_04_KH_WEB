@@ -21,7 +21,16 @@
       text-align: center;
       font-weight: bold;
       float: left;/* 가로 배치 */
+    }
+       
+    .px-example .box{
+      width: 150px;
+      height: 80px;
+    }
     
+    .percent-example .box{
+      width: 30%; /* 부모 .container 너비의 30% */
+      height: 100px; /* 높이 고정 */
     }
 
   </style>
@@ -38,6 +47,13 @@
     <div class="box">Width: 150px<br>Height: 80px</div>
   </div>
 
+  <h2>단위 : 퍼센트 (%)</h2>
+    <p>부모 요소의 크기에 비례하여 크기가 결정됩니다. 부모 컨테이너의 크기를 조절해보세요.</p>
+    <div class="container percent-example">
+        <div class="box">Width: 30%<br>Height: 100px</div>
+        <div class="box">Width: 30%<br>Height: 100px</div>
+        <div class="box">Width: 30%<br>Height: 100px</div>
+    </div>
 </body>
 
 </html>
