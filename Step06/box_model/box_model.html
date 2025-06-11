@@ -5,7 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>박스 모델</title>
   <style>
-   
+    div{
+      width: 400px;
+      height: 400px;
+      padding: 50px;
+      margin: 50px;
+      border: 50px solid orangered;
+    }
+    .box1{
+      /* 
+        가로세로 길이를 설정할때 어느 영역까지를 width 길이로 설정할 것인지에 대한 설정
+        400px         100px    100px    200px
+        border-box = padding + border + 콘텐츠 영역
+        600px         100px     100px     400px
+        content-box = padding + border + 콘텐츠 영역
+      */
+      box-sizing: content-box;
+    }
   </style>
 </head>
 <body>
