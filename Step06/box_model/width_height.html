@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      border:2px dashed #666;
+      padding: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .box{
+      background-color: burlywood;
+      border: 1px solid royalblue;
+      padding:15px;
+      margin:10px;
+      color:gray;
+      text-align: center;
+      font-weight: bold;
+      float: left;/* 가로 배치 */
+    
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>width & height 예제</h1>
+
+  <h2>단위 : px</h2>
+  <p>정확한 크기 지정, 뷰포트 크기에 상관 없이 항상 동일함</p>
+  <div class="container px-example">
+    <div class="box">Width: 150px<br>Height: 80px</div>
+    <div class="box">Width: 150px<br>Height: 80px</div>
+    <div class="box">Width: 150px<br>Height: 80px</div>
+  </div>
+
+</body>
+
+</html>
