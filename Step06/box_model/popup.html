@@ -9,6 +9,9 @@
       margin:0;
       padding:0;
     }
+    body{
+      height: 5000px;
+    }
     .popup1{
       width: 300px;
       border:2px solid cornflowerblue;
@@ -57,5 +60,67 @@
       <button>닫기</button>
     </p>
   </div>
+  <hr>
+  <div class="content">
+    <table>
+      <tr>
+        <td class="thumnail"><img src="/resource/img/moon.jpg"></td>
+        <td class="item_content">
+          <h2>제목 : 전망대 달 사진</h2>
+          <p>2025년 5월 21일 23:25</p>
+          <p>특정 전망대에서 찍은 사진입니다.<br>초승달 사진입니다.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <style>
+    .content{
+      width: 700px;
+      font-size: 0px;
+      margin: 50px;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .thumnail{
+      width: 35%;
+    }
+    td{
+      border:1px solid black;
+    }
+    .item_content{
+      padding: 5px 10px;
+      font-size: 16px;
+      vertical-align: top;
+    }
+  </style>
+
+  <hr>
+
+  <div class="content_container">
+    <img src="/resource/img/moon.jpg">
+    <div>
+      <h2>제목 : 전망대 달 사진</h2>
+      <p>2025년 5월 21일 23:25</p>
+      <p>특정 전망대에서 찍은 사진입니다.<br>초승달 사진입니다.</p>
+    </div>
+  </div>
+  <style>
+    .content_container{
+      width: 700px;
+      display: flex;
+      flex-flow: row nowrap;
+      border:1px solid black;
+      margin: 50px;
+    }
+    .content_container > img {
+      width: 35%;
+    }
+
+    .content_container > div{
+      padding: 5px 10px;
+    }
+  </style>
 </body>
 </html>
