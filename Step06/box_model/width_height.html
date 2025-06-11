@@ -6,33 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .container{
-      border:2px dashed #666;
+    html{
+      height: 5000px;
+    }
+
+    .container {
+      border: 2px dashed #666;
       padding: 10px;
       overflow: hidden;
       margin-bottom: 20px;
     }
-    .box{
+
+    .box {
       background-color: burlywood;
       border: 1px solid royalblue;
-      padding:15px;
-      margin:10px;
-      color:gray;
+      padding: 15px;
+      margin: 10px;
+      color: gray;
       text-align: center;
       font-weight: bold;
-      float: left;/* 가로 배치 */
+      float: left;
+      /* 가로 배치 */
     }
-       
-    .px-example .box{
+
+    .px-example .box {
       width: 150px;
       height: 80px;
     }
-    
-    .percent-example .box{
-      width: 30%; /* 부모 .container 너비의 30% */
-      height: 100px; /* 높이 고정 */
+
+    .percent-example .box {
+      width: 30%;
+      /* 부모 .container 너비의 30% */
+      height: 100px;
+      /* 높이 고정 */
     }
 
+    .rem-example .box {
+      width: 8rem;
+      /* 16px * 8, em 부모 기준, rem html 태그 기준 */
+      height: 8rem;
+    }
+    .viewport-example{
+      width: 50vw; /* 뷰포트 넓이의 50% */
+      height: 30vh; /* 뷰포트 높이의 30% */
+    }
+    .viewport-example .box{
+      width: 20vw; /* 뷰포트 넓이의 20% */
+      height: 20vh; /* 뷰포트 높이의 20% */
+    }
   </style>
 </head>
 
@@ -48,12 +69,28 @@
   </div>
 
   <h2>단위 : 퍼센트 (%)</h2>
-    <p>부모 요소의 크기에 비례하여 크기가 결정됩니다. 부모 컨테이너의 크기를 조절해보세요.</p>
-    <div class="container percent-example">
-        <div class="box">Width: 30%<br>Height: 100px</div>
-        <div class="box">Width: 30%<br>Height: 100px</div>
-        <div class="box">Width: 30%<br>Height: 100px</div>
-    </div>
+  <p>부모 요소의 크기에 비례하여 크기가 결정됩니다. 부모 컨테이너의 크기를 조절해보세요.</p>
+  <div class="container percent-example">
+    <div class="box">Width: 30%<br>Height: 100px</div>
+    <div class="box">Width: 30%<br>Height: 100px</div>
+    <div class="box">Width: 30%<br>Height: 100px</div>
+  </div>
+
+  <h2>단위 : rem 단위 </h2>
+  <p>HTML 루트 요소(`html`)의 `font-size`에 따라 크기가 결정됩니다. 기본적으로 1rem은 16px입니다.</p>
+  <div class="container rem-example">
+    <div class="box">Width: 8rem<br>Height: 5rem</div>
+    <div class="box">Width: 8rem<br>Height: 5rem</div>
+    <div class="box">Width: 8rem<br>Height: 5rem</div>
+  </div>
+
+  <h2>단위 : 뷰포트 (vw, vh)</h2>
+  <p>브라우저 뷰포트(화면)의 너비(`vw`)와 높이(`vh`)에 비례하여 크기가 결정됩니다. 브라우저 창 크기를 조절해보세요.</p>
+  <div class="container viewport-example">
+    <div class="box">Width: 20vw<br>Height: 10vh</div>
+    <div class="box">Width: 20vw<br>Height: 10vh</div>
+    <div class="box">Width: 20vw<br>Height: 10vh</div>
+  </div>
 </body>
 
 </html>
