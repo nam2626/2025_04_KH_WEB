@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메뉴바 - float</title>
   <style>
-   
+    nav {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      /* border: 1px solid blue; */
+      padding: 0;
+      display: inline-block;
+    }
+
+    li {
+      float: left;
+    }
+
+    a {
+      display: inline-block;
+      width: 200px;
+      padding: 20px 0px;
+      text-align: center;
+      color: black;
+      border: 1px solid black;
+      text-decoration: none;
+      background-color: #ece5e5;
+    }
+
+    .first {
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+    
+    .last {
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+    }
   </style>
 </head>
+
 <body>
   <nav>
     <ul>
@@ -19,4 +55,5 @@
     </ul>
   </nav>
 </body>
+
 </html>
