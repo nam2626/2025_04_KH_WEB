@@ -16,7 +16,15 @@
             list-style-type: none;
             font-size: 0px;
         }
-
+        /* 
+        display
+            해당 태그의 요소를 변환
+            - block : 블록요소로 변환
+            - inline : 인라인요소로 변환
+            - inline-block : 인라인 요소와 블록요소의 특성 동시에 가짐,
+                             글자 처럼 취급, 영역 크기도 잡을 수 있음, 
+                             margin으로 가운데 정렬 X
+        */
         li{
             display: inline-block;
             border:1px solid blue;
@@ -30,6 +38,13 @@
         a{
             text-align: center;
             font-size: 16px;
+            width: 200px;
+            background-color: navy;
+            display: block;
+            color: white;
+            font-weight: bold;
+            padding: 20px 0px;
+            text-decoration: none;
         }
     </style>
 </head>
