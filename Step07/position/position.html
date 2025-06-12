@@ -5,7 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+      body{
+        height: 5000px;
+      }
+      /* div 가로세로 100px 테두리 */
+      div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      /*
+        position
+            absoulte : 부모 요소를 기준으로 이동
+            fixed : 브라우저 기준으로 이동
+            relative : 원래 있어야될 자리를 기준으로 이동
+            static : 기본값, 원래 위치 순서상 자연스럽게 배치
+
+        top, bottom, left, right : 위치 지정
       
+      */
+      .absolute{
+        position: absolute;
+        top:100px;
+        left: 200px;
+      }
+
+      .fixed{
+        position: fixed;
+        right : 100px;
+        bottom: 100px;
+      }
     </style>
 </head>
 <body>
