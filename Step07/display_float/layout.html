@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>레이아웃 예제</title>
   <style>
+    body{
+      height: 3000px;
+    }
     header{
       width: 1200px;
       height: 200px;
@@ -61,6 +64,25 @@
     }
     footer{
       clear: both;
+      width: 1200px;
+      padding:20px 0px;
+      margin: 0 auto;
+      border:1px solid black;
+    }
+    .footer_container{
+      width: 100%;
+      display: inline-block;
+    }
+    .logo, .company_info{
+      width: 200px;
+      height: 200px;
+      border:1px solid black;
+    }
+    .logo{
+      float: left;
+    }
+    .company_info{
+      float: right;
     }
   </style>
 </head>
