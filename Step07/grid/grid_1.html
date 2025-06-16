@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드</title>
+    <style>
+        body{
+            height: 5000px;
+        }
+      
+        .item{
+            padding:50px;
+            border:1px solid black;
+            font-size: 1.5em;
+        }
+
+        /*
+            Grid(그리드)
+                - 행과 열로 이루어진 2차원 레이아웃 시스템
+                - 행과 열을 이용해서 각 요소들을 배치하고 정렬
+        */
+        .container1{
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: minmax(200px, auto);
+        }
+      
+        .container2{
+            display: grid;
+            grid-template-columns: repeat(5, minmax(100px,1fr));
+        }
+        .container3{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5,300px);
+        }
+        .container4{
+            display: grid;
+            width: 1200px;
+            margin:10px auto;
+            border: 1px solid red;
+            grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+        }
+        .container5{
+            display: grid;
+            width: 1200px;
+            margin:10px auto;
+            border: 1px solid red;
+            grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <hr>
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <hr>
+    <div class="container3">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <hr>
+    <div class="container4">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <hr>
+    <div class="container5">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
