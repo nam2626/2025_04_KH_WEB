@@ -9,7 +9,40 @@
             padding:10px;
             border:1px solid black;
         }
-      
+        .container{
+            width: 1200px;
+            border:1px solid blue;
+            margin:0 auto;
+            display: grid;
+            grid-template-rows: repeat(3,minmax(200px,1fr));
+            grid-template-areas: 
+            "box2 box1 box4"
+            "box2 box3 box3"
+            "box2 box3 box3"
+            "box5 box5 box5"
+            ;
+        }
+        .box1{
+            grid-area: box1;
+            background-color: red;
+        }
+        .box2{
+            grid-area: box2;
+            background-color: blueviolet;
+        }
+        .box3{
+            grid-area: box3;
+            background-color: blue;
+        }
+        .box4{
+            grid-area: box4;
+            background-color: orange;
+        }
+        .box5{
+            grid-area: box5;
+            background-color: green;
+        }
+
     </style>
 </head>
 <body>
