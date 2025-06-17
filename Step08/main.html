@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메인페이지</title>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
     }
-    .container{
+
+    .container {
       display: flex;
       width: 1200px;
       margin: 0 auto;
       flex-flow: column nowrap;
     }
-    header{
+
+    header {
       background-color: #e9e9e9;
       display: flex;
       justify-content: flex-end;
       padding: 10px 5px;
     }
-    .icon{
+
+    .icon {
       background-image: url(./img/icon.png);
       background-repeat: no-repeat;
     }
-    .icon_profile{
+
+    .icon_profile {
       background-position: -96px 0px;
     }
-    .icon_right_arrow{
+
+    .icon_right_arrow {
       background-position: -48px 0px;
     }
-    .icon_left_arrow{
+
+    .icon_left_arrow {
       background-position: 0px 0px;
     }
-    .profile_img{
+
+    .profile_img {
       display: inline-block;
       text-decoration: none;
       width: 48px;
       height: 48px;
     }
-    .profile_container{
+
+    .profile_container {
       display: flex;
       gap: 10px;
     }
-    .main_banner{
+
+    .main_banner {
       position: relative;
+      font-size: 0px;
     }
-    .ad_img{
+
+    .ad_img {
       width: 100%;
     }
-    .arrow{
+
+    .arrow {
       width: 48px;
       height: 48px;
       border: none;
@@ -58,27 +71,31 @@
       /* background-color: white;
       opacity: 0.5; */
       position: absolute;
-      
+
     }
-    .arrow_left_pos{
+
+    .arrow_left_pos {
       top: calc(50% - 24px);
       left: 0px;
     }
-    .arrow_right_pos{
+
+    .arrow_right_pos {
       top: calc(50% - 24px);
       right: 0px;
     }
 
-    nav{
+    nav {
       background-color: #e9e9e9;
     }
-    .main_menu{
+
+    .main_menu {
       list-style-type: none;
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
     }
-    .main_menu a{
+
+    .main_menu a {
       width: 200px;
       display: inline-block;
       padding: 20px 0px;
@@ -88,8 +105,45 @@
       text-decoration: none;
       color: black;
     }
+    main{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+    }
+    article{
+      width: 400px;
+    }
+    h2{
+      text-align: center;
+      padding: 20px 0px;
+    }
+    table{
+      border-collapse: collapse;
+      width: 100%;
+    }
+    tr{
+      border: 1px solid #e9e9e9 ;
+      border-left: none;
+      border-right: none;
+    }
+    td,th{
+      padding: 10px 0px;
+      text-align: center;
+    }
+    footer{
+      background-color: #e9e9e9;
+      padding: 40px;
+      margin-top: 20px;
+    }
+    footer ul{
+      list-style-type: none;
+    }
+    footer ul li {
+      margin-bottom: 10px;
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -115,8 +169,108 @@
         <li><a href="">오시는 길</a></li>
       </ul>
     </nav>
+    <main>
+      <article>
+        <h2>공지사항</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>글번호</th>
+              <th>제목</th>
+              <th>작성일</th>
+              <th>조회수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5</td>
+              <td>제목1</td>
+              <td>2021-07-26</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>제목2</td>
+              <td>2021-07-25</td>
+              <td>543</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>제목3</td>
+              <td>2021-07-23</td>
+              <td>331</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>제목4</td>
+              <td>2021-07-22</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>제목5</td>
+              <td>2021-07-21</td>
+              <td>13</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <article>
+        <h2>이벤트</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>글번호</th>
+              <th>제목</th>
+              <th>작성일</th>
+              <th>조회수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5</td>
+              <td>제목1</td>
+              <td>2021-07-26</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>제목2</td>
+              <td>2021-07-25</td>
+              <td>543</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>제목3</td>
+              <td>2021-07-23</td>
+              <td>331</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>제목4</td>
+              <td>2021-07-22</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>제목5</td>
+              <td>2021-07-21</td>
+              <td>13</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+    <footer>
+      <ul>
+        <li>OOOO 펜션</li>
+        <li>대표자 : OOOOO</li>
+        <li>연락처 : <a href="tel:010-0000-0000">010-0000-0000</a></li>
+        <li>주소 : 강원도 평창시 OOOOO OOOO OOOOO</li>
+      </ul>
 
-
+    </footer>
   </div>
 </body>
+
 </html>
