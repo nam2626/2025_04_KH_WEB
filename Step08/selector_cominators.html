@@ -1,70 +1,203 @@
 <!DOCTYPE html>
 
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자</title>
     <style>
-    /*
+        /*
         자식 선택자
             선택자 > 선택자{
                 CSS 속성 : 값;
                 ...
             }
     */
-    h2 > span{
-        color:red;
-    }
-    /* p 태그에 있는 자식 요소중 span에만 밑줄 적용 */
-    p > span{
-        text-decoration: underline;
-    }
-    /* ul 태그에 자식 요소인 li에만 글꼴을 두껍게 */
-    ul > li{
-        font-weight: bold;
-    }
-    /*
+        h2>span {
+            color: red;
+        }
+
+        /* p 태그에 있는 자식 요소중 span에만 밑줄 적용 */
+        p>span {
+            text-decoration: underline;
+        }
+
+        /* ul 태그에 자식 요소인 li에만 글꼴을 두껍게 */
+        ul>li {
+            font-weight: bold;
+        }
+
+        /*
         자손 선택자
             선택자 선택자{
                 CSS 속성 : 값;
             }
     */
-    /* 
+        /* 
         클래스 속성값이 container 내부에 있는 모든 li 태그의 글자 색을 blueviolet
     */
-    .container li{
-        color:blueviolet;
-    }
-    body ul{
-        border: 1px solid black;
-    }
-    /* 
+        .container li {
+            color: blueviolet;
+        }
+
+        body ul {
+            border: 1px solid black;
+        }
+
+        /* 
         동생요소 선택자
         
         선택자 + 선택자{
             CSS속성 : 값;
         }
     */
-    .brother1{
-        background-color: yellow;
-    }
-    .brother1 + li{
-        text-decoration: underline;
-    }
-    .brother2{
-        background-color: orange;
-    }
+        .brother1 {
+            background-color: yellow;
+        }
 
-    /* 
+        .brother1+li {
+            text-decoration: underline;
+        }
+
+        .brother2 {
+            background-color: orange;
+        }
+
+        /* 
         모든 동생 요소들을 선택
     */
-    .brother2 ~ li{
-        color: green;
-    }
-    
+        .brother2~li {
+            color: green;
+        }
+
+        /*
+        종속 선택자
+    */
+        p.bold {
+            font-weight: bold;
+        }
+
+        li#under {
+            text-decoration: underline;
+        }
+
+        /* 
+    의사(가상) 클래스
+        태그의 특정한 상태, 상황을 만족했을때 선택가능하게하는 키워드
+        : 으로 선택
+
+    예> 마우스를 특정 태그에 클릭 했을때
+        마우스를 특정 영역에 올리면 배경 이미지(아이콘)가 바뀌는 경우
+    */
+        /* 하이퍼링크가 걸려있을때 */
+        a:link {
+            text-decoration: none;
+            color: crimson;
+        }
+
+        /* 해당 링크를 클릭해서 방문한 적이 있을때 */
+        a:visited {
+            text-decoration: none;
+            color: crimson;
+        }
+
+        a:link,
+        a:visited {
+            font-weight: bold;
+        }
+
+        /* 마우스를 해당 태그 및 선택자에 올렸을때 */
+        a:hover {
+            background-color: orange;
+        }
+
+        /* 하이퍼링크에 마우스를 올렸때 */
+        a:link:hover {
+            text-decoration: line-through;
+        }
+
+        /*  h2에 마우스가 올라가면 밑줄이 나타나게끔 처리  */
+        h2:hover {
+            text-decoration: underline;
+        }
+
+        /* ul에 마우스가 올라가면 원하는 배경색이 나오게끔 처리 */
+        ul:hover {
+            background-color: burlywood;
+        }
+
+        p:hover {
+            background-color: aqua;
+        }
+
+        /* ol 태그의 자식 li에 마우스가 올라갔을때 원하는 배경색이 나오게끔 처리 */
+        ol>li:hover {
+            background-color: cornflowerblue;
+        }
+
+        /* 마우스 클릭 했을때 */
+        a:active {
+            background-color: black;
+        }
+
+        /* 해당 태그가 선택이 되었을때 */
+        input:focus {
+            background-color: bisque;
+            outline: none;
+        }
+
+        /* disabled : 비활성화된 상태 */
+        input:disabled {
+            background-color: red !important;
+        }
+
+        /* 읽기 전용 */
+        input:read-only {
+            border: 2px solid blue;
+            background-color: bisque;
+        }
+
+        /* 반드시 입력해야하는 경우 */
+        input:required {
+            border: 2px solid brown;
+        }
+
+        /* 체크박스(라디오버튼)가 체크된 상태 */
+        #chk:checked {
+            width: 100px;
+            height: 100px;
+        }
+
+        #chk:checked+label {
+            background-color: blueviolet;
+        }
+
+        /* 
+            첫번째 자식 요소만 선택
+                선택된 태그가 첫번째 자식일 경우만 선택
+        */
+        .container1>p:first-child {
+            color: crimson;
+        }
+
+        /* 선택된 그룹별 태그 중 첫번째 것만 선택*/
+        .container1>p:first-of-type {
+            text-decoration: underline;
+        }
+
+        /* 선택된 태그가 마지막 자식일 경우만 선택 */
+        .container1>p:last-child {
+            color: blueviolet;
+        }
+
+        /* 선택된 그룹별 태그 중 마지막 것만 선택 */
+        .container1>p:last-of-type {
+            text-decoration: line-through;
+        }
     </style>
 </head>
+
 <body>
     <h2><span>자식</span> 선택자</h2>
     <p class="bold">중앙선거관리위원회는 대통령이 임명하는 3인, 국회에서 선출하는 3인과 대법원장이 지명하는 3인의 위원으로 구성한다. 위원장은 위원중에서 호선한다.</p>
@@ -82,7 +215,7 @@
             <li>국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호한다.</li>
             <li>대통령의 선거에 관한 사항은 법률로 정한다. 대법관의 임기는 6년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다.</li>
             <ol>
-                <li>테스트</li>
+                <li class="bold">테스트</li>
                 <li>테스트</li>
                 <li>테스트</li>
                 <li>테스트</li>
@@ -120,7 +253,8 @@
     <hr>
     <h2>가상(의사) 클래스</h2>
     <!--콘텐트의 특정 상태에 따른 스타일 지정-->
-    <p>군인 또는 군무원이 아닌 국민은 <a href="#">대한민국의 영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄</a>중 <a>법률</a>이 정한 경우와 비상계엄이 선포된 경우를
+    <p>군인 또는 군무원이 아닌 국민은 <a href="#">대한민국의 영역안에서는 중대한 군사상 기밀·초병·초소·유독음식물공급·포로·군용물에 관한 죄</a>중 <a>법률</a>이 정한 경우와 비상계엄이 선포된
+        경우를
         제외하고는 군사법원의 재판을 받지
         아니한다. 탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.</p>
     <p>
@@ -146,6 +280,7 @@
         <p>제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다.</p>
         <p>대한민국의 국민이 되는 요건은 법률로 정한다. 모든 국민은 신속한 재판을 받을 권리를 가진다. 형사피고인은 상당한 이유가 없는 한 지체없이 공개재판을 받을 권리를 가진다.</p>
     </div>
+    <hr>
     <div class="container1">
         <p>모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다.</p>
         <p>누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.
@@ -178,4 +313,5 @@
 
     </ol>
 </body>
+
 </html>
