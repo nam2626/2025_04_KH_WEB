@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인페이지</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      display: flex;
+      width: 1200px;
+      margin: 0 auto;
+      flex-flow: column nowrap;
+    }
+    header{
+      background-color: #e9e9e9;
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 5px;
+    }
+    .icon{
+      background-image: url(./img/icon.png);
+      background-repeat: no-repeat;
+    }
+    .profile_icon{
+      background-position: -96px 0px;
+    }
+    .profile_img{
+      display: inline-block;
+      text-decoration: none;
+      width: 48px;
+      height: 48px;
+    }
+    .profile_container{
+      display: flex;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="profile_container">
+        <a href="" class="profile_img icon profile_icon"></a>
+        <div class="profile_info">
+          <p>OOO님이 로그인 하셨습니다</p>
+          <p>로그아웃 | 정보수정</p>
+        </div>
+      </div>
+    </header>
+
+
+  </div>
+</body>
+</html>
