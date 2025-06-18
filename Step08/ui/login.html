@@ -18,13 +18,45 @@
       gap: 10px;
       margin: 50px 100px;
     }
+    h2{
+      text-align: center;
+    }
+    input{
+      border: 2px ridge gray;
+      padding : 5px;
+      font-size: 1.3em;
+      height: 50px;
+      padding-left: 50px;
+    }
+    .icon_id{
+      background-image: url('./../img/profile.png');
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-position: 5px center;
+    }
+    .icon_passwd{
+      background-image: url('./../img/password.png');
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-position: 5px center;
+    }
+
+    button{
+      height: 50px;
+      background-color: cornflowerblue;
+      color:white;
+      font-weight: bold;
+      font-size: 1.3em;
+      border: none;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
   <div id="login_form">
     <h2>로그인</h2>
-    <input type="text" placeholder="아이디를 입력하세요">
-    <input type="password" placeholder="비밀번호를 입력하세요">
+    <input type="text" class="icon_id"  placeholder="아이디를 입력하세요">
+    <input type="password" class="icon_passwd" placeholder="비밀번호를 입력하세요">
     <button>로그인</button>
   </div>
 </body>
