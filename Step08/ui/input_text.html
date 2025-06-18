@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    .txt_control{
+      width: 250px;
+      display: flex;
+      flex-flow: row nowrap;
+      border: 2px outset gray;
+      border-radius: 10px;
+      padding: 10px;
+      gap: 10px;
+    }
+    .icon{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-image: url(/resource/img/search.png);
+      background-size: 30px;
+      background-repeat: no-repeat;
+    }
+    .txt_box{
+      border: none;
+      outline: none;
+      border-left: 1px solid gray;
+      padding-left: 10px;
+    }
+    .txt_control:has(input:focus){
+      border-bottom: 2px outset blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="txt_control">
+    <span class="icon"></span>
+    <input type="text" class="txt_box">
+  </div>
+</body>
+</html>
