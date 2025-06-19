@@ -4,13 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+    }
+    #login_frm{
+      width: 520px;
+      padding: 20px 50px;
+      border: 1px solid black;
+      margin: 100px auto;
+      display: flex;
+      flex-flow: column nowrap;
+      gap : 10px;
+    }
+    #login_frm > h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type=text],input[type=password]{
+      height: 60px;
+      padding-left: 20px;
+      font-size: 1.3em;
+    }
+    .btn_login{
+      background-color: black;
+      color: white;
+      border: none;
+      height: 60px;
+      font-size: 1.3em;
+    }
+    li {
+      font-size: 1.2em;
+      word-break: break-all;
+    }
+    .strong{
+      font-weight: bold;
+      color:red;
+    }
+    .btn_favor{
+      align-self: center;
+      /* height: 50px; */
+      font-size: 1.2em;
+      color:white;
+      background-color: red;
+      font-weight: bold;
+      padding:15px 15px;
+      border: none;
+    }
+  </style>
 </head>
 <body>
   <div id="login_frm">
-    <h2>로그인</h2>    
-    <input type="text" class="txt_id">
-    <input type="password" class="txt_pass">
-    <button>로그인</button>
+    <h1>로그인</h1>    
+    <input type="text" class="txt_id" placeholder="아이디(*이메일 형식 입력 불가)">
+    <input type="password" class="txt_pass" placeholder="비밀번호">
+    <button class="btn_login">로그인</button>
     <div>
       <input type="checkbox" id="chk"> <label for="chk">아이디 저장</label>
     </div>
@@ -21,7 +70,7 @@
         <span class="strong">즐겨찾기 추가</span> 해주세요
       </li>
     </ul>
-    <button>즐겨찾기 추가</button>
+    <button class="btn_favor">즐겨찾기 추가하기</button>
   </div>
 </body>
 </html>
