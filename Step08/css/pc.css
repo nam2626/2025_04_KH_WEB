@@ -1,0 +1,15 @@
+@charset 'UTF-8';
+.container{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.item{
+  width: 25%;
+  border: 1px solid black;
+  font-size: 2em;
+  background-color: chocolate;
+  box-sizing: border-box;
+  padding: 50px 0px;
+  text-align: center;
+}

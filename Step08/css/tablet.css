@@ -1,0 +1,7 @@
+.item{
+  width: calc(100% / 3);
+  padding: 30px 0px;
+  text-align: center;
+  font-size: 1.6em;
+  background-color: yellowgreen;
+}
